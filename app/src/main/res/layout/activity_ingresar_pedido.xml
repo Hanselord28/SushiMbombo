@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".IngresarPedido">
+
+    <EditText
+        android:id="@+id/txtIDMesa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="96dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="   ID Mesa Ej: 4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.079"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/txtCobertura"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Cobertura Ej: Nori"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.079"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtIDMesa" />
+
+    <EditText
+        android:id="@+id/txtRelleno1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Relleno 1 Ej: Pollo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.079"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtCobertura" />
+
+    <EditText
+        android:id="@+id/txtRelleno2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Relleno 2 Ej: Palta"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.079"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtRelleno1" />
+
+    <EditText
+        android:id="@+id/txtRelleno3"
+        android:layout_width="225dp"
+        android:layout_height="43dp"
+        android:layout_marginTop="36dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Relleno 3 Ej: Queso Crema"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.086"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtRelleno2" />
+
+    <Button
+        android:id="@+id/btnAgregarPedido"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:text="Agregar Pedido"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.886"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtCantidad" />
+
+    <EditText
+        android:id="@+id/txtCantidad"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Cantidad Ej: 3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.079"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtRelleno3" />
+
+    <CheckBox
+        android:id="@+id/chkChimbombo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Chimbombo?"
+        tools:layout_editor_absoluteX="49dp"
+        tools:layout_editor_absoluteY="616dp" />
+
+    <TextView
+        android:id="@+id/lblIngresarPedido"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="Ingresar Pedido"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/txtIDMesa"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+</android.support.constraint.ConstraintLayout>

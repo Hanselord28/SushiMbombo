@@ -20,11 +20,25 @@
         app:layout_constraintVertical_bias="0.108" />
 
     <Button
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Button"
-        tools:layout_editor_absoluteX="161dp"
-        tools:layout_editor_absoluteY="542dp" />
+        android:id="@+id/btnIngresarPedido"
+        android:layout_width="220dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="88dp"
+        android:text="Ingresar pedido"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.575"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lblTitulo" />
+
+    <Button
+        android:id="@+id/btnVerPedidos"
+        android:layout_width="221dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="88dp"
+        android:text="Ver Pedidos"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.573"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnIngresarPedido" />
 
 </android.support.constraint.ConstraintLayout>
