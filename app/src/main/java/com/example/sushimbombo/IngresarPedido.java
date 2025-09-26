@@ -1,13 +1,14 @@
 package com.example.sushimbombo;
-import android.support.v7.app.AppCompatActivity;
+
 import android.os.Bundle;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.Toast;
-import android.widget.*;
 
+import androidx.appcompat.app.AppCompatActivity;
 
 public class IngresarPedido extends AppCompatActivity {
-    //instancia desde el layout los campos y boton
+    // instancia desde el layout los campos y boton
     private EditText txtIDMesa, txtPack, txtPrecio, txtCantidad;
     private Button btnAgregarPedido;
 
@@ -16,47 +17,39 @@ public class IngresarPedido extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ingresar_pedido);
 
+        EditText txtIDMesa   = findViewById(R.id.txtIDMesa);
+        EditText txtPack     = findViewById(R.id.txtPack);
+        EditText txtPrecio   = findViewById(R.id.txtPrecio);
+        EditText txtCantidad = findViewById(R.id.txtCantidad);
+        Button btnAgregar    = findViewById(R.id.btnAgregarPedido);
 
-    //vinculacion de los componentes de la interfaz grafica
-    Button oButtonIngresarPedido = findViewById(R.id.btnIngresarPedido);
-    txtIDMesa = findViewById(R.id.txtIDMesa);
-    txtPack = findViewById(R.id.txtPack);
-    txtCantidad = findViewById(R.id.txtCantidad);
-    txtPrecio = findViewById(R.id.txtPrecio);
-    btnAgregarPedido = findViewById(R.id.btnAgregarPedido);
+        btnAgregar.setOnClickListener(v -> {
+            try {
+                String packStr = txtPack.getText().toString().trim();
+                int idMesa     = Integer.parseInt(txtIDMesa.getText().toString().trim());
+                int precio     = Integer.parseInt(txtPrecio.getText().toString().trim());
+                int cantidad   = Integer.parseInt(txtCantidad.getText().toString().trim());
 
+                if (packStr.isEmpty()) {
+                    Toast.makeText(this, "Ingresa el Pack", Toast.LENGTH_SHORT).show();
+                    return;
+                }
 
-
-
-        //Boton Ingresar Pedido y su logica
-    oButtonIngresarPedido.setOnClickListener(view -> {
-
-        try {
-
-           //recibe los datos de los campos y los guarda en variables temporales
-            String pck = txtPack.getText().toString().trim();
-            int IdM = Integer.parseInt(txtIDMesa.getText().toString().trim());
-            int prs = Integer.parseInt(txtPrecio.getText().toString().trim());
-            int cant = Integer.parseInt(txtCantidad.getText().toString().trim());
-
-            //le entrega las variables temporales al constructor vacio y los agrega al objeto oPedido
-
-            Pedido oPedido = new Pedido(pck, IdM, prs,cant);
+                Pedido p = new Pedido(idMesa, packStr, precio, cantidad);
+                GestorPedidos.agregar(p);
 
 
-            //un toast para confirmar que se agrego el pedido
-            Toast.makeText(this, "Pedido agregado", Toast.LENGTH_SHORT).show();
-
-            // limpiar campos
-            txtIDMesa.setText("");
-            txtPack.setText("");
-            txtPrecio.setText("");
-            txtCantidad.setText("");
+                Toast.makeText(this, "Pedido agregado", Toast.LENGTH_SHORT).show();
+                txtIDMesa.setText("");
+                txtCantidad.setText("");
+                txtPack.setText("");
+                txtPrecio.setText("");
 
 
-        } catch (Exception e) {
-            Toast.makeText(this, "Verifica los datos ingresados", Toast.LENGTH_SHORT).show();
-        }});
-
+            } catch (NumberFormatException e) {
+                Toast.makeText(this, "Mesa/Precio/Cantidad deben ser números", Toast.LENGTH_SHORT).show();
+            }
+        });
     }
+
 }

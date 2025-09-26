@@ -3,47 +3,21 @@ package com.example.sushimbombo;
 import android.media.tv.TvView;
 
 public class Pedido {
-    private Integer IdMesa;
-
-    private String Pack;
-
+    private int idMesa;       // usa primitivo para evitar null
+    private String pack;
     private int precio;
+    private int cantidad;
 
-    private Integer Cantidad;
-
-
-
-    public Pedido(String pck, int idM, int prs, int cant) {
-    }
-
-    public Pedido (Integer IdMesa, String Pack, int precio, Integer Cantidad) {
-        this.Pack = Pack;
+    public Pedido(int idMesa, String pack, int precio, int cantidad) {
+        this.idMesa = idMesa;
+        this.pack = pack;
         this.precio = precio;
-        this.Cantidad = Cantidad;
+        this.cantidad = cantidad;
     }
 
-
-    public String getTipo() {
-        return Pack;
-    }
-
-    public void setTipo(String Pack) {
-        Pack = Pack;
-    }
-
-    public int getPrecio() {
-        return precio;
-    }
-
-    public void setPrecio(int precio) {
-        this.precio = precio;
-    }
-
-    public Integer getCantidad() {
-        return Cantidad;
-    }
-
-    public void setCantidad(Integer cantidad) {
-        Cantidad = cantidad;
-    }
+    public int getIdMesa()     { return idMesa; }
+    public String getTipo()    { return pack; }
+    public int getPrecio()     { return precio; }
+    public int getCantidad()   { return cantidad; }
 }
+

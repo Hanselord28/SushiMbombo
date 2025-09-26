@@ -1,44 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:padding="24dp">
 
     <TextView
         android:id="@+id/lblTitulo"
-        android:layout_width="348dp"
-        android:layout_height="78dp"
-        android:text="SushiMbombo?"
-        android:textSize="48sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.746"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.108" />
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SushiMbombo"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        android:paddingBottom="24dp"/>
 
     <Button
-        android:id="@+id/btnIngresarPedido"
-        android:layout_width="220dp"
-        android:layout_height="48dp"
-        android:layout_marginTop="88dp"
+        android:id="@+id/btnIrIngresarPedido"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:text="Ingresar pedido"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.575"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/lblTitulo" />
+        />
 
     <Button
         android:id="@+id/btnVerPedidos"
-        android:layout_width="221dp"
-        android:layout_height="48dp"
-        android:layout_marginTop="88dp"
-        android:text="Ver Pedidos"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.573"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnIngresarPedido" />
-
-</android.support.constraint.ConstraintLayout>
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Ver pedidos"
+        android:layout_marginTop="12dp"/>
+</LinearLayout>
