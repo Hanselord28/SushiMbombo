@@ -8,7 +8,7 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class IngresarPedido extends AppCompatActivity {
-    // instancia desde el layout los campos y boton
+
     private EditText txtIDMesa, txtPack, txtPrecio, txtCantidad;
     private Button btnAgregarPedido;
 

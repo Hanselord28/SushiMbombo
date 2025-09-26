@@ -3,7 +3,7 @@ package com.example.sushimbombo;
 import android.media.tv.TvView;
 
 public class Pedido {
-    private int idMesa;       // usa primitivo para evitar null
+    private int idMesa;
     private String pack;
     private int precio;
     private int cantidad;
